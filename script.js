@@ -6,7 +6,7 @@ function loadStuff(){
     }
     else {
         console.log("fetch")
-        fetch("https://script.google.com/macros/s/AKfycbwc0dRnZ6M91XencOwYjMHJ7isCZXvDA1geumrWWxlROB2QBfKIH8eOTmS34Cp1nd-uOA/exec")
+        fetch("https://script.google.com/macros/s/AKfycbwWMzOvxz4TwsZBFfOILQLwwe7wqWJtpvbYW7ZOtA3AFhon1YdzQsriNEXolJXS4183Yw/exec")
         .then(res=>res.json())
         .then(
         (result) => {
@@ -23,76 +23,99 @@ window.addEventListener("beforeunload", function(e) {
   });
 
 function doStuff(data){
-    console.log(data)
-    getFilterBtn(data)
+    // getFilterBtn(data)
     displayBody(data)
     sessionStorage.setItem("data", JSON.stringify(data));
+    console.log(data)
 }
 
 
 function displayBody(data){
-    const data2 = data.map((x, index)=>{
-        return `
-        <div id="${x[3]}" class="portcard">
-        <div class="thumbnaildiv" id="${x[3]}" style="background-image: url('${x[5]}');">
-        </div>
-        <h3 id="${x[3]}">${x[0]}</h3>
-        </div>
-        `
+    const data2 = data.map((x)=>{
+        if(x[1]==""){
+            //nothing
+        }
+        else{
+            return `
+            <div id="${x[3]}" class="portcard">
+            <div class="thumbnaildiv" id="${x[3]}" style="background-image: url('${x[5]}');">
+            </div>
+            <p>${x[1]}</p>
+            <h3 id="${x[3]}">${x[0]}</h3>
+            </div>
+            `
+        }
     })
     $(".box2").html(data2)
     $("body").show()
 }
 
 
-// DISPLAY TAG
-function getFilterBtn(data){
-    //create array
-    const arr = data.map((x)=>{return x[1]})
-    const newarr = [];
-    arr.forEach((x)=>{
-        if(newarr.includes(x)){
-            console.log(`nothing`)
-        }
-        else{
-            newarr.push(x)
-        }
-    })
-    const arrhtml = `
-    <button class="filterbtn">${newarr[0]}</button>
-    <button class="filterbtn">${newarr[1]}</button>
-    <button class="filterbtn">${newarr[2]}</button>
-    `
-    console.log(arrhtml)
-    // $(".filter").html(arrhtml) here you idiot
-    $(".filter").append(arrhtml)
-}
+// DISPLAY TAG OLD
+// function getFilterBtn(data){
+//     //create array
+//     const arr = data.map((x)=>{return x[1]})
+//     const newarr = [];
+//     arr.forEach((x)=>{
+//         if(newarr.includes(x)){
+//         }
+//         else{
+//             newarr.push(x)
+//         }
+//     })
+//     const arrhtml = `
+//     <button class="filterbtn">${newarr[0]}</button>
+//     <button class="filterbtn">${newarr[1]}</button>
+//     <button class="filterbtn">${newarr[2]}</button>
+//     `
+//     $(".filter").append(arrhtml)
+// }
 
-$(".filter").on("click", function(e){
+// $(".filter").on("click", function(e){
+//     if (e.target.tagName == "BUTTON"){
+//         const filterWord = e.target.innerHTML
+//         getFilterData(filterWord)
+//         $(".filterbtn").removeClass("filterActive")
+//         e.target.className += " filterActive"
+//     }
+// })
+
+// function getFilterData(filterWord){
+//     const getData = JSON.parse(sessionStorage.getItem("data"))
+//     if (filterWord == "All"){
+//     displayBody(getData)
+//     }
+//     else{
+//     const newData = getData.filter((x)=>x.includes(filterWord))
+//     console.log(newData)
+//     displayBody(newData)
+//     }
+// }
+
+// Display tag FILTER NEW
+//
+$(".filternew").on("click", function(e){
     if (e.target.tagName == "BUTTON"){
         const filterWord = e.target.innerHTML
-        getFilterData(filterWord)
-        console.log(e.currentTarget.children)
+        getFilterDataNew(filterWord)
+        console.log(filterWord)
         $(".filterbtn").removeClass("filterActive")
         e.target.className += " filterActive"
     }
-    // else {
-    //     $(".filterbtn").removeClass("filterActive")
-    //     e.target.className += " filterActive"
-    // }
 })
 
-function getFilterData(filterWord){
+function getFilterDataNew(filterWord){
     const getData = JSON.parse(sessionStorage.getItem("data"))
     if (filterWord == "All"){
     displayBody(getData)
     }
     else{
-    const newData = getData.filter((x)=>x.includes(filterWord))
+    const newData = getData.filter((x)=>x[1].includes(filterWord))
     console.log(newData)
     displayBody(newData)
     }
 }
+
 
 // write a function that adds a class to that target but removes class from everyone elses
 // function changeFilterBtn{

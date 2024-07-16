@@ -52,8 +52,6 @@ function onLoad(){
 
     
     const bodyimages = `
-    <img src="${pagedata[5]}" class="portimage">
-    <img src="${pagedata[6]}" class="portimage">
     <img src="${pagedata[7]}" class="portimage">
     <img src="${pagedata[8]}" class="portimage">
     <img src="${pagedata[9]}" class="portimage">
@@ -66,7 +64,7 @@ function onLoad(){
     `
 
     const bodylink =`
-    <div>
+    <div class="player">
     ${pagedata[4]}
     </div>
     `

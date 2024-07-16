@@ -23,7 +23,7 @@ body{
 }
 
 .title h1{
-    font-size: 140px;
+    font-size: 130px;
     font-weight: 600;
     line-height: 150px;
 }
@@ -32,7 +32,7 @@ body{
 .fixedheader{
     position: fixed;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     width: 100dvw;
     height: 40px;
@@ -47,14 +47,15 @@ body{
 }
 
 .headerbtn {
-    padding: 12px 30px 12px 30px;
+    padding: 14px 30px 14px 30px;
     border: 1px solid #000;
+    background-color: white;
     border-radius: 50px;
     font-size: 20px;
     font-weight: 500;
 }
 
-.icon img{
+.icon svg{
     width: 70px;
     height: auto;
 }
@@ -87,25 +88,30 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 
+.portcardtextwrapper{
+    margin: 0px 8px 0px 8px;
+}
+
 .portcard{
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     box-sizing: border-box;
     padding: 8px;
 }
 
 .portcard h3{
     font-weight: 500;
-    font-size: 32px;
+    font-size: 34px;
     padding: 12px 0px 0px 0px;
 }
 
 .portcard p {
-    display: inline-block;
-    margin-top: 24px; padding: 12px 28px 12px 28px;
-    font-size: 16px;
+    /* display: inline-block;
+    padding: 12px 28px 12px 28px; */
+    margin-top: 24px;
+    font-size: 18px;
     font-weight: 500;
-    background-color: #E7E7E7;
-    border-radius: 30px;
+    /* background-color: #E7E7E7; */
+    /* border-radius: 30px; */
 }
 
 .thumbnaildiv{
@@ -144,7 +150,8 @@ body{
     border: none;
     outline: none;
     box-shadow: none;
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 500;
     padding: 10px 26px 10px 26px;
     color: #BABABA;
 }
@@ -214,6 +221,20 @@ body{
     border-radius: 20px;
 }
 
+/* player */
+.player{
+    margin-bottom: 2dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player iframe{
+    aspect-ratio: 16/9;
+    width: 98dvw;
+    height: auto;
+}
+
 /* port body */
 
 .portbody1{
@@ -264,20 +285,51 @@ body{
 
 /* Tablet */
 @media only screen and (max-width: 1050px) {
+    .title h1{
+        font-size: 100px;
+        line-height: 100px;
+    }
 
     .thumbnaildiv{
-        height: 380px;
+        height: 320px;
     }
+
+    .portcard h3{
+        font-size: 26px;
+    }
+
+    /* .portcard p {
+        padding: 10px 24px 10px 24px;
+        font-size: 14px;
+    } */
+
     .titlebox h1{
         font-size: 50px;
     }
+
   }
 
 
 /* Mobile */
 @media only screen and (max-width: 750px) {
+    /* header menu */
+
+    .fixedheader{
+        padding: 24px 16px 24px 16px;
+    }
+    
+    .icon svg{
+        width: 60px;
+    }
+
+    /* header menu */
+
+    .thumbnaildiv{
+        height: 280px;
+    }
+
     .title h1{
-        font-size: 60px;
+        font-size: 50px;
         line-height: 80px;
     }
     .title p{
@@ -289,9 +341,7 @@ body{
     .box2{
         grid-template-columns: 1fr ;
     }
-    .portcard{
-        margin-bottom: 60px;
-    }
+
     .titlebox1{
         grid-template-columns: 1fr;
         margin: 30px 10px 30px 10px;
@@ -301,5 +351,9 @@ body{
     }
     .portimagehero{
         height: 60dvh;
+    }
+
+    .portcard p{
+        font-size: 16px;
     }
   }

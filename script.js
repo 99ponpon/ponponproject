@@ -41,8 +41,8 @@ function displayBody(data){
             <div class="thumbnaildiv" id="${x[3]}" style="background-image: url('${x[5]}');">
             </div>
             <div class="portcardtextwrapper">
-            <p>${x[1]}</p>
             <h3 id="${x[3]}">${x[0]}</h3>
+            <p>${x[1]}</p>
             </div>
             </div>
             `

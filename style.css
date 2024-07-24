@@ -18,7 +18,7 @@ body{
 
 .title p{
     font-size: 24px;
-    color: #B7B7B7;
+    color: #AFAFAF;
     margin:10px 0px 0px 6px;
 }
 
@@ -37,7 +37,7 @@ body{
     width: 100dvw;
     height: 40px;
     box-sizing: border-box;
-    padding: 24px 32px 24px 32px;
+    padding: 32px 32px 24px 32px;
 }
 
 .fixedheader .buttons{
@@ -56,7 +56,7 @@ body{
 }
 
 .icon svg{
-    width: 70px;
+    width: 60px;
     height: auto;
 }
 
@@ -98,7 +98,13 @@ body{
     padding: 8px;
 }
 
+.portcard:hover > .thumbnaildiv{
+    border-radius: 60px;
+    transition: linear 0.05s;
+}
+
 .portcard h3{
+    margin-top: 14px;
     font-weight: 500;
     font-size: 34px;
     padding: 12px 0px 0px 0px;
@@ -107,9 +113,9 @@ body{
 .portcard p {
     /* display: inline-block;
     padding: 12px 28px 12px 28px; */
-    margin-top: 24px;
     font-size: 18px;
     font-weight: 500;
+    margin-top: 10px;
     /* background-color: #E7E7E7; */
     /* border-radius: 30px; */
 }
@@ -154,6 +160,10 @@ body{
     font-weight: 500;
     padding: 10px 26px 10px 26px;
     color: #BABABA;
+}
+
+.filterbtn:hover{
+    color: black;
 }
 
 .filter {
@@ -295,7 +305,7 @@ body{
     }
 
     .portcard h3{
-        font-size: 26px;
+        font-size: 32px;
     }
 
     /* .portcard p {
@@ -319,23 +329,23 @@ body{
     }
     
     .icon svg{
-        width: 60px;
+        width: 55px;
     }
 
     /* header menu */
 
     .thumbnaildiv{
-        height: 280px;
+        height: 320px;
     }
 
     .title h1{
-        font-size: 50px;
+        font-size: 80px;
         line-height: 80px;
     }
     .title p{
-        font-size: 28px;
+        font-size: 24px;
         line-height: auto;
-        margin:0px;
+        margin-top:14px;
 
     }
     .box2{

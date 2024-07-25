@@ -250,9 +250,10 @@ body{
 /* port body */
 
 .portbody1{
+    justify-items: center;
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr;
-    background-color: black;
     
 }
 

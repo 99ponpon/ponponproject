@@ -205,6 +205,8 @@ body{
 
 
 .titlebox h1{
+    padding-right: 20px;
+    box-sizing: border-box;
     font-weight: 500;
     font-size: 70px;
 }
@@ -358,6 +360,10 @@ body{
     }
     .titlebox .descrpbox{
         padding: 40px 0px 0px 0px;
+    }
+
+    .titlebox h1{
+        padding-right:0px
     }
 
     .portimage{

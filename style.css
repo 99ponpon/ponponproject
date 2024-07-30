@@ -24,7 +24,7 @@ body{
 
 .title h1{
     font-size: 130px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 150px;
 }
 
@@ -191,7 +191,7 @@ body{
 }
 
 .titlebox{
-    margin: 12dvh 0px 14dvh 0px;
+    margin: 10dvh 0px 12dvh 0px;
     
 }
 

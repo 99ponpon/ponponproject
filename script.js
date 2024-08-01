@@ -135,6 +135,30 @@ $(".box2").on("click", function(e){
     }
 })
 
+// SCROLLING
+const container1 = document.getElementById("scroll1");
+  container1.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+      container1.scrollLeft += 100;
+      e.preventDefault();
+    }
+    else {
+      container1.scrollLeft -= 100;
+      e.preventDefault();
+    }
+  });
+
+  const container2 = document.getElementById("scroll2");
+  container2.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+      container2.scrollLeft += 100;
+      e.preventDefault();
+    }
+    else {
+      container2.scrollLeft -= 100;
+      e.preventDefault();
+    }
+  });
 
 
 

@@ -310,10 +310,12 @@ body{
     margin: 0; padding: 0;
 }
 
-/* .grid1{
-    grid-template-columns: 1fr !important
-} */
-/* ???????? */
+/* page 1 footer */
+
+.pg1footer{
+    width: 100dvw;
+    height: 50dvh;
+}
 
 
 /* Page 2 */

@@ -153,9 +153,10 @@ body{
 }
 
 .portcard p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
-    margin-top: 14px;
+    margin-top: 10px;
+    color: gray;
 }
 
 .thumbnaildiv{
@@ -259,13 +260,13 @@ body{
 
 .titlebox .tagbox{
     font-weight: 500;
-    font-size: 20px;
-    margin-top: 18px;
+    font-size: 22px;
+    margin-top: 30px;
 }
 
 .titlebox .descrpbox{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     padding: 0px 30px 0px 30px;
 }
 
@@ -371,15 +372,13 @@ body{
 
     .portcard h3{
         font-size: 32px;
+        line-height: 45px;
     }
 
-    /* .portcard p {
-        padding: 10px 24px 10px 24px;
-        font-size: 14px;
-    } */
 
     .titlebox h1{
-        font-size: 50px;
+        font-size: 45px;
+        line-height: 60px;
     }
 
   }
@@ -442,6 +441,6 @@ body{
     }
 
     .portcard p{
-        font-size: 16px;
+        font-size: 18px;
     }
   }

@@ -51,17 +51,33 @@ function onLoad(){
     
 
     
-    const bodyimages = `
-    <img src="${pagedata[7]}" class="portimage">
-    <img src="${pagedata[8]}" class="portimage">
-    <img src="${pagedata[9]}" class="portimage">
-    <img src="${pagedata[10]}" class="portimage">
-    <img src="${pagedata[11]}" class="portimage">
-    <img src="${pagedata[12]}" class="portimage">
-    <img src="${pagedata[13]}" class="portimage">
-    <img src="${pagedata[14]}" class="portimage">
-    <img src="${pagedata[15]}" class="portimage">
-    `
+    // const bodyimages = `
+    // <img src="${pagedata[7]}" class="portimage">
+    // <img src="${pagedata[8]}" class="portimage">
+    // <img src="${pagedata[9]}" class="portimage">
+    // <img src="${pagedata[10]}" class="portimage">
+    // <img src="${pagedata[11]}" class="portimage">
+    // <img src="${pagedata[12]}" class="portimage">
+    // <img src="${pagedata[13]}" class="portimage">
+    // <img src="${pagedata[14]}" class="portimage">
+    // <img src="${pagedata[15]}" class="portimage">
+    // `
+
+
+// document.querySelectorAll(".portimage").forEach(img => {
+//     console.log(img + "hello WAHT");});
+
+// document.querySelectorAll(".portimage").forEach(x => {
+//     console.log("hello"+x.offsetWidth);})
+// //
+
+const newString = pagedata.slice(7);
+
+let Newhtml = "";
+
+for (let i = 0; i < newString.length; i++) {
+     Newhtml += `<img src="${newString[i]}" id="check${i}">`;
+}
 
     const bodylink =`
     <div class="player">
@@ -69,23 +85,50 @@ function onLoad(){
     </div>
     `
     $(".porttitle").html(headerdata)
-    $(".portbody1").html(bodyimages)
+    // $(".portbody1").html(bodyimages)
     $(".portbody2").html(bodylink)
+    
+    document.querySelector(".portbody1").innerHTML = Newhtml;
 
-    // if (pagedata[4] === ""){
-    //     $(".portbody").addClass("grid1")
-    // }
-    // else{
-    //     console.log("there's something 0.0")
-    // }
+
+for (let i = 0; i < newString.length; i++) {
+    const img = document.getElementById(`check${i}`);
+
+    img.onload = function () {
+        const imageWidth = img.naturalWidth;
+        const imageHeight = img.naturalHeight;
+
+        console.log(imageWidth, imageHeight)
+
+        if (imageHeight > imageWidth) {
+            img.classList.add("portimagetall");
+            console.log("I'm so tall")
+        } else {
+            img.classList.add("portimageshort");
+        }
+    };
+}
+
+// Change the whole layout
+// for (let i = 0; i < newString.length; i++) {
+//     const img = document.getElementById(`check${i}`);
+
+//     img.onload = function () {
+//         const imageWidth = img.naturalWidth;
+//         const imageHeight = img.naturalHeight;
+
+//         console.log(imageWidth, imageHeight)
+
+//         if (imageHeight > imageWidth) {
+//               const theBody = document.querySelector(".portbody1")
+//               theBody.classList.remove("portbody1")
+//               theBody.classList.add("portbody1B")
+//         } else {
+//             console.log("me is short")
+//         }
+//     };
+// }
+
 
     sessionStorage.setItem("usedBack", "yes")
 }
-
-// function myFunc(index) {
-//     const data = sessionStorage.getItem("data")
-//     const getData = JSON.parse(data)[index]
-//     console.log(getData[3])
-//     const dataDisplay = `<img src="${getData[3]}">`
-//     $(".box3").html(dataDisplay)
-// }

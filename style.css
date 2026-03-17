@@ -2,28 +2,79 @@
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
 }
 
 body{
     overflow-x: hidden;
 }
 
-
 /* title */
+.title2{
+    margin: 80px 16px 10dvh 32px;
+    box-sizing: border-box;
+}
+
+.title2 h1{
+    font-size: 130px;
+    font-weight: 400;
+    line-height: 150px;
+}
 
 .hero{
     width: 100dvw;
-    height: 180px;
+    height: 1px;
 }
 
-.hello svg{
+/* .hello svg{
     width: 700px;
-}
+} */
 
 .title{
-    margin: 0px 16px 20px 32px;
+    margin: 80px 16px 10dvh 32px;
     box-sizing: border-box;
 }
+
+.deco1{
+    font-family: "Avenir", sans-serif;;
+    width: 100dvw;
+    font-size: 190px;
+    font-weight: 600;
+    line-height: 250px;
+    margin-bottom: 15dvh;
+}
+.bunnytop{
+    justify-self: center;
+}
+
+.bunnytop p{
+    display: inline-block;
+    margin: 0; padding: 0;
+}
+
+.deco1 p{
+    justify-self: center;
+    background-color: transparent;
+    color: none;
+}
+
+.bunnyears{
+    animation: sway 2s infinite;
+    transform-origin: bottom center
+}
+
+@keyframes sway {
+0% {
+    transform: rotate(5deg); /* Start at 5 degrees right */
+  }
+  50% {
+    transform: rotate(-5deg); /* Move to 5 degrees left in the middle */
+  }
+  100% {
+    transform: rotate(5deg); /* Return to the start for a seamless loop */
+  }
+}
+
 
 .tags{
     height: auto;
@@ -85,7 +136,7 @@ body{
     width: 100dvw;
     height: 40px;
     box-sizing: border-box;
-    padding: 32px 32px 24px 32px;
+    padding: 16px 32px 24px 32px;
 }
 
 .fixedheader .buttons{
@@ -100,10 +151,12 @@ body{
     font-weight: 600;
 }
 
-.icon svg{
-    width: 60px;
-    height: auto;
-}
+.icon{
+        width: 55px;
+        font-weight: 800;
+    }
+
+
 
 
 /* ///////////////////////////// index ///////////////////////////// */
@@ -131,38 +184,36 @@ body{
 }
 
 .portcardtextwrapper{
-    margin: 0px 8px 0px 8px;
+    padding: 0px 10px 0px 10px;
 }
 
 .portcard{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     box-sizing: border-box;
     padding: 8px;
 }
 
 .portcard:hover > .thumbnaildiv{
-    border-radius: 50px;
+    opacity: 50%;
     transition: linear 0.05s;
 }
 
 .portcard h3{
-    margin-top: 14px;
+    margin-top: 6px;
     font-weight: 500;
     font-size: 34px;
     padding: 12px 0px 0px 0px;
 }
 
 .portcard p {
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 10px;
-    color: gray;
+    font-size: 18px;
+    margin-top: 8px;
 }
 
 .thumbnaildiv{
     width: 100%;
     height: 550px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -277,38 +328,74 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     overflow: hidden;
-    border-radius: 20px;
 }
 
 /* player */
 .player{
-    margin-bottom: 2dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* width: 98dvw;
+     */
 }
 
-.player iframe{
-    aspect-ratio: 16/9;
+/* .player iframe{
+    display: block;
+    margin: auto;
+
+} */
+
+.tallvideo{
+    display: block;
+    margin: auto;
+    width: 40dvw;
+    height: auto;
+    aspect-ratio: 9/16;
+}
+
+.widevideo{
+    display: block;
+    margin: auto;
     width: 98dvw;
     height: auto;
+    aspect-ratio: 16/9;
+    margin-bottom: 2vh;
 }
 
 /* port body */
 
 .portbody1{
     justify-items: center;
-    background-color: white;
     display: grid;
     grid-template-columns: 1fr;
-    
+    container-type: inline-size;
+    container-name: picture;
+    padding: 16px;
 }
 
 
-.portimage{
-    width: 75dvw;
+/* .portbody1B{
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    container-type: inline-size;
+    container-name: picture;
+    padding: 16px;
+} */
+
+.portimageshort{
+    width: 100%;
     height: auto;
     margin: 0; padding: 0;
+}
+
+.portimagetall{
+    width: auto;
+    height: 100vh;
+    margin: 0; padding: 0;
+}
+
+.portimage{
+    width: 100%;
+    height: auto;
 }
 
 /* page 1 footer */
@@ -366,6 +453,11 @@ body{
         line-height: 100px;
     }
 
+    .title2 h1{
+        font-size: 100px;
+        line-height: 100px;
+    }
+
     .thumbnaildiv{
         height: 340px;
     }
@@ -388,13 +480,18 @@ body{
 @media only screen and (max-width: 750px) {
     /* header menu */
 
+    
+
+    .deco1{
+    font-size: 150px;
+    line-height: 190px;
+    margin-bottom: 10dvh;
+}
+
     .fixedheader{
-        padding: 24px 16px 24px 16px;
+        padding: 8px 24px 8px 24px;
     }
     
-    .icon svg{
-        width: 55px;
-    }
 
     /* hello title */
 
@@ -407,10 +504,11 @@ body{
     }
 
     .portcard:hover > .thumbnaildiv{
-        border-radius: 10px;
+        opacity: 50%;
     }
 
     .title h1{
+        margin-top: 60px;
         font-size: 70px;
         line-height: 80px;
     }
@@ -437,9 +535,20 @@ body{
         padding-right:0px
     }
 
-    .portimage{
+    /* .portimage{
         width:100dvw;
-    }
+    } */
+
+    .portimageshort{
+    width: 100%;
+    height: auto;
+}
+
+.portimagetall{
+    width: 100%;
+    height: auto;
+}
+
     .portimagehero{
         height: 60dvh;
     }
@@ -448,3 +557,23 @@ body{
         font-size: 18px;
     }
   }
+
+  .tallvideo{
+    width: 98dvw;
+}
+
+
+  /* Big ass screen */
+@media only screen and (min-width: 1920px) {
+        .box2{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    .title{
+    margin: 32px 16px 3dvh 32px;
+}
+
+    .deco1{
+    margin-bottom: 12dvh;
+}
+}

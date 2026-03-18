@@ -345,9 +345,10 @@ body{
 .tallvideo{
     display: block;
     margin: auto;
-    width: 40dvw;
-    height: auto;
+    width: auto;
+    height: 98dvh;
     aspect-ratio: 9/16;
+    
 }
 
 .widevideo{
@@ -382,14 +383,14 @@ body{
 } */
 
 .portimageshort{
-    width: 85%;
+    width: 45vw;
     height: auto;
     margin: 0; padding: 0;
 }
 
 .portimagetall{
-    width: auto;
-    height: 100vh;
+    width: 45vw;
+    height: auto;
     margin: 0; padding: 0;
 }
 
@@ -433,7 +434,7 @@ body{
 /* RESPONSIVE */
 
 /* Tablet */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1600px) {
     .hello svg{
         width: 60dvw;
     }
@@ -473,6 +474,18 @@ body{
         line-height: 60px;
     }
 
+    .portimageshort{
+    width: 80vw;
+    height: auto;
+    margin: 0; padding: 0;
+}
+
+.portimagetall{
+    width: 80vw;
+    height: auto;
+    margin: 0; padding: 0;
+}
+
   }
 
 
@@ -484,7 +497,7 @@ body{
 
     .deco1{
     font-size: 100px;
-    line-height: 135px;
+    line-height: 140px;
     margin-bottom: 10dvh;
 }
 
@@ -535,9 +548,6 @@ body{
         padding-right:0px
     }
 
-    /* .portimage{
-        width:100dvw;
-    } */
 
     .portimageshort{
     width: 100%;
@@ -556,15 +566,18 @@ body{
     .portcard p{
         font-size: 18px;
     }
+
+      .tallvideo{
+    height: auto;
+    width: 90vw;
+}
   }
 
-  .tallvideo{
-    width: 98dvw;
-}
+
 
 
   /* Big ass screen */
-@media only screen and (min-width: 1920px) {
+@media only screen and (max-width: 1920px) {
         .box2{
         grid-template-columns: 1fr 1fr 1fr ;
     }
@@ -576,4 +589,6 @@ body{
     .deco1{
     margin-bottom: 12dvh;
 }
+
 }
+

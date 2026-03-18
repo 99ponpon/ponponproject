@@ -383,13 +383,13 @@ body{
 } */
 
 .portimageshort{
-    width: 45vw;
+    width: 55vw;
     height: auto;
     margin: 0; padding: 0;
 }
 
 .portimagetall{
-    width: 45vw;
+    width: 55vw;
     height: auto;
     margin: 0; padding: 0;
 }
@@ -434,7 +434,7 @@ body{
 /* RESPONSIVE */
 
 /* Tablet */
-@media only screen and (max-width: 1600px) {
+@media only screen and (min-width: 600px) and (max-width: 1400px) {
     .hello svg{
         width: 60dvw;
     }
@@ -490,7 +490,7 @@ body{
 
 
 /* Mobile */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 600px) {
     /* header menu */
 
     
@@ -531,7 +531,6 @@ body{
 
     }
 
-        /* others */
     .box2{
         grid-template-columns: 1fr ;
     }
@@ -577,7 +576,7 @@ body{
 
 
   /* Big ass screen */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1401px) {
         .box2{
         grid-template-columns: 1fr 1fr 1fr ;
     }
